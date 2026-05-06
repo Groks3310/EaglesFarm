@@ -1,0 +1,202 @@
+.shop-page { min-height: 100vh; }
+
+/* CONTROLS BAR */
+.shop-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+.search-wrap {
+  flex: 1;
+  min-width: 200px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.search-icon {
+  position: absolute;
+  left: 14px;
+  font-size: 1rem;
+  pointer-events: none;
+}
+.search-input {
+  width: 100%;
+  padding: 10px 40px 10px 40px;
+  border: 2px solid rgba(59,130,246,0.2);
+  border-radius: 50px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  background: rgba(255,255,255,0.8);
+  color: var(--text);
+  outline: none;
+  transition: all 0.3s ease;
+}
+.search-input:focus {
+  border-color: var(--secondary);
+  background: white;
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.1);
+}
+.clear-btn {
+  position: absolute;
+  right: 14px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-light);
+  font-size: 0.85rem;
+  padding: 4px;
+}
+.sort-select {
+  padding: 10px 16px;
+  border: 2px solid rgba(59,130,246,0.2);
+  border-radius: 50px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  background: rgba(255,255,255,0.8);
+  color: var(--text);
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  min-width: 180px;
+}
+.sort-select:focus {
+  border-color: var(--secondary);
+}
+
+/* LAYOUT */
+.shop-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+/* SIDEBAR */
+.shop-sidebar { position: sticky; top: 90px; }
+.sidebar-card { padding: 24px; }
+.sidebar-card h3 {
+  font-size: 1.1rem;
+  color: var(--primary);
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(59,130,246,0.15);
+}
+.category-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.cat-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  background: transparent;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--text);
+  transition: all 0.25s ease;
+  text-align: left;
+}
+.cat-btn:hover {
+  background: rgba(59,130,246,0.08);
+  color: var(--secondary);
+  border-color: rgba(59,130,246,0.2);
+}
+.cat-btn.active {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  border-color: transparent;
+}
+.cat-count {
+  font-size: 0.78rem;
+  font-weight: 700;
+  background: rgba(255,255,255,0.25);
+  padding: 2px 8px;
+  border-radius: 50px;
+}
+.cat-btn:not(.active) .cat-count {
+  background: rgba(59,130,246,0.1);
+  color: var(--secondary);
+}
+
+/* RESULTS */
+.results-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+.results-count {
+  font-size: 0.92rem;
+  color: var(--text-light);
+}
+.results-count strong { color: var(--primary); }
+.clear-filter {
+  background: rgba(239,68,68,0.1);
+  color: #EF4444;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'DM Sans', sans-serif;
+}
+.clear-filter:hover { background: rgba(239,68,68,0.2); }
+
+/* NO RESULTS */
+.no-results {
+  text-align: center;
+  padding: 60px 40px;
+}
+.no-results-icon { font-size: 3.5rem; margin-bottom: 16px; }
+.no-results h3 {
+  font-size: 1.4rem;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+.no-results p { color: var(--text-light); }
+
+/* SKELETON */
+.skeleton-card {
+  border-radius: 16px;
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0.4) 25%,
+    rgba(255,255,255,0.7) 50%,
+    rgba(255,255,255,0.4) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .shop-layout {
+    grid-template-columns: 1fr;
+  }
+  .shop-sidebar {
+    position: static;
+  }
+  .category-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 600px) {
+  .shop-controls { flex-direction: column; }
+  .sort-select { width: 100%; }
+}

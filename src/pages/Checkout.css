@@ -1,0 +1,242 @@
+.checkout-page { min-height: 100vh; }
+
+/* STEPS */
+.steps-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 48px;
+  gap: 0;
+}
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.step-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  border: 2px solid rgba(59,130,246,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--text-light);
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+.step.active .step-circle {
+  background: var(--secondary);
+  border-color: var(--secondary);
+  color: white;
+  box-shadow: 0 4px 16px rgba(59,130,246,0.4);
+}
+.step.done .step-circle {
+  background: #22C55E;
+  border-color: #22C55E;
+  color: white;
+}
+.step span {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-light);
+}
+.step.active span { color: var(--secondary); }
+.step-line {
+  width: 80px;
+  height: 2px;
+  background: rgba(59,130,246,0.2);
+  margin: 0 4px;
+  margin-bottom: 24px;
+}
+
+/* LAYOUT */
+.checkout-layout {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 32px;
+  align-items: start;
+}
+.checkout-main { display: flex; flex-direction: column; gap: 0; }
+.checkout-main.glass-card { padding: 36px; }
+
+/* FORM */
+.checkout-form { margin-top: 24px; }
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.checkout-next-btn {
+  width: 100%;
+  justify-content: center;
+  padding: 14px;
+  font-size: 1rem;
+  margin-top: 8px;
+}
+
+/* REVIEW */
+.review-section { padding: 28px; }
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.review-header h2 { font-size: 1.3rem; color: var(--primary); }
+.edit-btn {
+  background: rgba(59,130,246,0.1);
+  color: var(--secondary);
+  border: none;
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  transition: all 0.2s;
+}
+.edit-btn:hover { background: rgba(59,130,246,0.2); }
+.review-info { display: flex; flex-direction: column; gap: 8px; }
+.review-info p { font-size: 0.92rem; color: var(--text-light); }
+.review-info strong { color: var(--text); }
+.review-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(59,130,246,0.1);
+}
+.review-item:last-child { border-bottom: none; }
+.review-item img {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.review-item-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.review-item-info strong { font-size: 0.92rem; color: var(--primary); }
+.review-item-info span { font-size: 0.8rem; color: var(--text-light); }
+.review-item-price { color: var(--secondary); font-size: 0.95rem; }
+
+/* PAYMENT NOTE */
+.payment-note {
+  padding: 20px 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-top: 20px;
+}
+.payment-note-icon { font-size: 2rem; flex-shrink: 0; }
+.payment-note h3 { font-size: 1rem; color: var(--primary); margin-bottom: 6px; }
+.payment-note p { font-size: 0.85rem; color: var(--text-light); line-height: 1.6; }
+.place-order-btn {
+  width: 100%;
+  justify-content: center;
+  padding: 16px;
+  font-size: 1.05rem;
+  margin-top: 20px;
+}
+
+/* CHECKOUT SUMMARY */
+.checkout-summary {
+  padding: 24px;
+  position: sticky;
+  top: 90px;
+}
+.checkout-summary h2 {
+  font-size: 1.3rem;
+  color: var(--primary);
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(59,130,246,0.15);
+}
+.summary-items { display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; }
+.summary-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.summary-item img {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.summary-item-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.summary-item-info span { font-size: 0.82rem; color: var(--text); font-weight: 500; }
+.summary-item-info small { font-size: 0.75rem; color: var(--text-light); }
+.summary-item strong { font-size: 0.88rem; color: var(--primary); white-space: nowrap; }
+.summary-divider {
+  height: 1px;
+  background: rgba(59,130,246,0.15);
+  margin: 12px 0;
+}
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.summary-total span { font-weight: 600; color: var(--text); }
+.summary-total strong {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: var(--primary);
+}
+
+/* SUCCESS */
+.order-success {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 60px 40px;
+}
+.success-icon { font-size: 5rem; margin-bottom: 20px; }
+.order-success h2 { font-size: 2rem; color: var(--primary); margin-bottom: 12px; }
+.order-success > p {
+  color: var(--text-light);
+  font-size: 0.97rem;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+.success-info {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  text-align: left;
+  background: rgba(59,130,246,0.05);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 32px;
+}
+.success-info-item { display: flex; align-items: flex-start; gap: 14px; }
+.success-info-item span { font-size: 1.4rem; flex-shrink: 0; }
+.success-info-item strong { display: block; color: var(--primary); font-size: 0.88rem; margin-bottom: 2px; }
+.success-info-item p { color: var(--text-light); font-size: 0.85rem; }
+.success-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .checkout-layout { grid-template-columns: 1fr; }
+  .checkout-summary { position: static; }
+}
+@media (max-width: 600px) {
+  .form-row { grid-template-columns: 1fr; }
+  .steps-indicator { gap: 0; }
+  .step-line { width: 40px; }
+  .order-success { padding: 40px 20px; }
+  .success-actions { flex-direction: column; }
+}
