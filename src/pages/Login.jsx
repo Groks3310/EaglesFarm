@@ -47,7 +47,7 @@ export default function Login() {
         <div className="auth-card glass-card">
 
           <div className="auth-header">
-            <Link to="/" className="auth-logo">🐷 FarmPrideNg</Link>
+            <Link to="/" className="auth-logo">🐷  Eagles Farm</Link>
             <h1>Welcome Back!</h1>
             <p>Login to your account to continue shopping</p>
           </div>
@@ -120,7 +120,7 @@ export default function Login() {
           <div className="auth-side-content">
             <div className="auth-side-icon">🐷</div>
             <h2>Nigeria's #1 Pig Farm</h2>
-            <p>Join thousands of farmers and buyers who trust FarmPrideNg for premium pigs and quality feeds.</p>
+            <p>Join thousands of farmers and buyers who trust  Eagles Farm for premium pigs and quality feeds.</p>
             <div className="auth-benefits">
               <div className="auth-benefit">✅ Access to premium pig breeds</div>
               <div className="auth-benefit">✅ Exclusive member discounts</div>

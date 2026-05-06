@@ -18,11 +18,14 @@ export default function ProductCard({ product }) {
     <div className="product-card fade-in">
       <Link to={`/shop/${product._id}`} style={{ textDecoration: 'none' }}>
         <div style={{ overflow: 'hidden', borderRadius: '16px 16px 0 0' }}>
-          <img
-            src={product.image}
-            alt={product.name}
-            onError={e => { e.target.src = 'https://via.placeholder.com/300x220?text=No+Image'; }}
-          />
+         <img
+  src={product.image || 'https://placehold.jp/300x220.png'}
+  alt={product.name}
+  onError={(e) => { 
+    e.target.onerror = null; // Prevents infinite loops if the fallback also fails
+    e.target.src = 'https://placehold.jp/300x220.png'; 
+  }}
+/>
         </div>
         <div className="product-card-body">
           <span className="badge">{product.category === 'pig' ? '🐷 Live Pig' : '🌾 Feed'}</span>

@@ -5,11 +5,11 @@ import { toast } from 'react-toastify';
 import './Blog.css';
 
 const staticComments = [
-  { _id: '1', username: 'Emeka Okafor', text: 'I bought two Red Duroc pigs last month and they are doing great! Very healthy animals. FarmPrideNg is the real deal.', createdAt: '2024-06-01T10:00:00Z' },
-  { _id: '2', username: 'Chinwe Adaeze', text: 'The pig feed is excellent quality. My pigs have been growing so fast since I switched to FarmPrideNg feeds. Highly recommended!', createdAt: '2024-06-05T14:30:00Z' },
+  { _id: '1', username: 'Emeka Okafor', text: 'I bought two Red Duroc pigs last month and they are doing great! Very healthy animals.  Eagles Farm is the real deal.', createdAt: '2024-06-01T10:00:00Z' },
+  { _id: '2', username: 'Chinwe Adaeze', text: 'The pig feed is excellent quality. My pigs have been growing so fast since I switched to  Eagles Farm feeds. Highly recommended!', createdAt: '2024-06-05T14:30:00Z' },
   { _id: '3', username: 'Biodun Fashola', text: 'Great customer service! They guided me through everything as a first-time pig farmer. Delivery was fast and the pig arrived healthy.', createdAt: '2024-06-10T09:15:00Z' },
   { _id: '4', username: 'Amaka Nwosu', text: 'The Berkshire pig I ordered is beautiful! Worth every naira. Already planning to order two more next month.', createdAt: '2024-06-15T16:45:00Z' },
-  { _id: '5', username: 'Tunde Bakare', text: 'Been farming pigs for 3 years but FarmPrideNg breeds are on another level. The genetics are superior to what I was getting before.', createdAt: '2024-06-18T11:20:00Z' },
+  { _id: '5', username: 'Tunde Bakare', text: 'Been farming pigs for 3 years but  Eagles Farm breeds are on another level. The genetics are superior to what I was getting before.', createdAt: '2024-06-18T11:20:00Z' },
 ];
 
 const blogPosts = [
