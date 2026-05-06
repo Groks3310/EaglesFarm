@@ -16,7 +16,7 @@ const [featuredProducts, setFeaturedProducts] = useState(staticFeatured);
 const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-  axios.get('/api/products')
+  axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/products`)
     .then(res => {
       const data = Array.isArray(res.data) ? res.data : [];
       if (data.length > 0) {
