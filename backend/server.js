@@ -13,11 +13,11 @@ app.use(cors({
 app.use(cors({ origin: '*', credentials: true }));
 app.use(express.json());
 
-// Routes
-app.use('/api/auth', require('./routes/auth'));
-app.use('/api/products', require('./routes/products'));
-app.use('/api/comments', require('./routes/comments'));
-app.use('/api/orders', require('./routes/orders'));
+// Update these lines in your server.js
+app.use('/api/auth', require('./backend/routes/auth'));
+app.use('/api/products', require('./backend/routes/products'));
+app.use('/api/comments', require('./backend/routes/comments'));
+app.use('/api/orders', require('./backend/routes/orders'));
 
 // Test route
 app.get('/', (req, res) => res.json({ message: 'FarmPrideNg API is running!' }));
