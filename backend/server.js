@@ -6,11 +6,15 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const app = express();
-app.use(cors({ 
-    origin: ["http://localhost:5173","http://localhost:5174","https://your-eagles-farm.netlify.app"], 
-    credentials: true 
+
+// CORS - allow all origins
+app.use(cors({
+  origin: '*',
+  credentials: false,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
 }));
-app.use(cors({ origin: '*', credentials: true }));
+
 app.use(express.json());
 
 // Routes
@@ -28,7 +32,7 @@ const MONGO_URI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/pigfarm';
 mongoose.connect(MONGO_URI)
   .then(() => {
     console.log('✅ MongoDB connected');
-    const PORT = process.env.PORT || 5000;
+    const PORT = process.env.PORT || 5001;
     app.listen(PORT, () => console.log(`✅ Server running on port ${PORT}`));
   })
   .catch(err => {
