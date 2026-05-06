@@ -24,7 +24,7 @@ export default function Login() {
     }
     setLoading(true);
     try {
-      const res = await axios.post('/api/auth/login', formData);
+      const res = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/auth/register`, formData);
       login(res.data);
       toast.success(`Welcome back, ${res.data.username}! 🐷`);
       navigate('/');

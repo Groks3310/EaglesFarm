@@ -47,11 +47,12 @@ export default function Register() {
     }
     setLoading(true);
     try {
-      const res = await axios.post('/api/auth/register', {
-        username: formData.username,
-        email: formData.email,
-        password: formData.password,
-      });
+     // Change your code to this:
+const res = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/auth/register`, {
+  username: formData.username,
+  email: formData.email,
+  password: formData.password,
+});
       login(res.data);
       toast.success(`Welcome to FarmPrideNg, ${res.data.username}! 🎉`);
       navigate('/');
