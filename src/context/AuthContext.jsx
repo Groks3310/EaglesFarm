@@ -12,6 +12,7 @@ export const AuthProvider = ({ children }) => {
     if (stored) {
       const parsed = JSON.parse(stored);
       setUser(parsed);
+      // Set token on page reload
       axios.defaults.headers.common['Authorization'] = `Bearer ${parsed.token}`;
     }
     setLoading(false);

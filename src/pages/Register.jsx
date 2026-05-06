@@ -27,7 +27,6 @@ export default function Register() {
       toast.error('Please fill in all fields');
       return;
     }
-    // Validate email format
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if (!emailRegex.test(formData.email)) {
       toast.error('Please enter a valid email address');
@@ -47,17 +46,18 @@ export default function Register() {
     }
     setLoading(true);
     try {
-     // Change your code to this:
-const res = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/auth/register`, {
-  username: formData.username,
-  email: formData.email,
-  password: formData.password,
-});
+      const res = await axios.post('/api/auth/register', {
+        username: formData.username,
+        email: formData.email,
+        password: formData.password,
+      });
       login(res.data);
       toast.success(`Welcome to FarmPrideNg, ${res.data.username}! 🎉`);
       navigate('/');
     } catch (err) {
-      const msg = err.response?.data?.message || 'Registration failed. Please try again.';
+      const msg = err?.response?.data?.message
+        || err?.message
+        || 'Registration failed. Please try again.';
       toast.error(msg);
     } finally {
       setLoading(false);
