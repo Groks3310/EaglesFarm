@@ -4,7 +4,7 @@ import ProductCard from '../components/ProductCard.jsx';
 import './Shop.css';
 
 const staticProducts = [
-  { _id: '1', name: 'Red Duroc Pig ', price: 400000, description: 'Healthy Red Duroc breed. Known for excellent meat quality and fast growth.', image: '/images/pig1.jpg', category: 'pig', breed: 'Red Duroc' },
+  { _id: '1', name: 'Red Duroc Pig ', price: 400000, description: 'Healthy Red Duroc breed. Known for excellent meat quality and fast growth.', image: '/images/pig1.jpg', category: 'pig', breed: 'Red Duroc' },{ _id: '1', name: 'Red Duroc Pig ', price: 400000, description: 'Healthy Red Duroc breed. Known for excellent meat quality and fast growth.', image: '/images/pig1.jpg', category: 'pig', breed: 'Red Duroc' },
   { _id: '2', name: 'Red Duroc Pig ', price: 500000, description: 'Premium Red Duroc breed. Excellent temperament, fully vaccinated.', image: '/images/pig2.jpg', category: 'pig', breed: 'Red Duroc' },
   { _id: '3', name: 'Marbled Berkshire Pig', price: 600000, description: 'Rare Marbled Berkshire breed. Famous for its superior marbled meat.', image: '/images/pig3.jpg', category: 'pig', breed: 'Marbled Berkshire' },
   { _id: '4', name: 'Red Duroc Pig', price: 400000, description: 'Quality Red Duroc breed, 50kg. Strong immune system, raised on natural feed.', image: '/images/pig4.jpg', category: 'pig', breed: 'Red Duroc' },
