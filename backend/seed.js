@@ -4,9 +4,19 @@ const dotenv = require('dotenv');
 
 dotenv.config();
 
-const Product = require('./models/Product');
+const Product = require('./models/product');
 
-mongoose.connect('mongodb://mongo:vXOWXVcPqLSbybXKsNtiKiEWrQqZLmje@maglev.proxy.rlwy.net:41431/pigfarm?authSource=admin')
+const isRailway = Boolean(process.env.RAILWAY_ENVIRONMENT || process.env.RAILWAY_PROJECT_ID);
+const MONGO_URI =
+  process.env.MONGO_URI || (isRailway ? null : 'mongodb://127.0.0.1:27017/pigfarm');
+
+if (!MONGO_URI) {
+  console.error('❌ MONGO_URI is not set. Add it to backend/.env or Railway Variables, then run: npm run seed');
+  process.exit(1);
+}
+
+mongoose
+  .connect(MONGO_URI)
   .then(async () => {
     console.log('✅ MongoDB connected');
     await Product.deleteMany({});
