@@ -26,8 +26,16 @@ app.use('/api/orders', require('./routes/orders'));
 // Test route
 app.get('/', (req, res) => res.json({ message: 'FarmPrideNg API is running!' }));
 
-// MongoDB Connection
-const MONGO_URI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/pigfarm';
+// MongoDB — Railway has no local MongoDB; without MONGO_URI the app exits and the proxy shows "failed to respond"
+const isRailway = Boolean(process.env.RAILWAY_ENVIRONMENT || process.env.RAILWAY_PROJECT_ID);
+const MONGO_URI =
+  process.env.MONGO_URI || (isRailway ? null : 'mongodb://127.0.0.1:27017/pigfarm');
+
+if (!MONGO_URI) {
+  console.error('❌ MONGO_URI is not set.');
+  console.error('   Railway → your service → Variables → add MONGO_URI (MongoDB Atlas SRV string).');
+  process.exit(1);
+}
 
 const PORT = process.env.PORT || 5001;
 
@@ -36,6 +44,7 @@ mongoose
   .then(() => console.log('✅ MongoDB connected'))
   .catch((err) => {
     console.error('❌ MongoDB connection error:', err.message);
+    console.error('   Check MONGO_URI, Atlas IP access (0.0.0.0/0 for testing), and DB user/password.');
     process.exit(1);
   });
 
