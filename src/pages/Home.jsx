@@ -88,7 +88,7 @@ const [loading, setLoading] = useState(false);
             <span className="tag">Why Choose Us</span>
             <h2 className="section-title">The Eagles Farm Difference</h2>
             <p className="section-subtitle">
-              We raise pigs the right way — with care, quality nutrition, and full transparency.
+              We render agricultural services, breeding healthy animals in a prinstine environment. Transparency is the Goal!
             </p>
           </div>
           <div className="features-grid">
@@ -146,13 +146,19 @@ const [loading, setLoading] = useState(false);
               <span className="tag">Our Story</span>
               <h2>Built on Passion<br />for Farming</h2>
               <p>
-                Eagles Farm was founded with a simple mission: make premium pig farming
-                accessible to every Nigerian. From our humble beginnings with just 10 pigs,
-                we have grown into one of Nigeria's most trusted pig farms.
-              </p>
+               Eagles Farm was built on passion, hard work, and the vision of creating a modern and sustainable agricultural business that provides quality livestock and farm products. What started as a dream has grown into a farm dedicated to excellence, integrity, and continuous growth. </p>
+
+              <p>At Eagles Farm, we believe farming is more than a business — it is a commitment to feeding communities, creating opportunities, and building a future through agriculture. With a focus on proper animal care, clean farming practices, and efficient management, we strive to raise healthy livestock and deliver the best value to our customers. </p> 
+             <p>
+              Our farm combines modern techniques with dedication and daily discipline to ensure quality  production in every stage of operation. From breeding to feeding and farm management, every  process is handled with care and professionalism.</p>
+            <p>
+              Eagles Farm stands for growth, resilience, and consistency. We are driven by the belief that success in agriculture comes from patience, knowledge, and the willingness to keep improving every day.
+            </p>
+            <p>
+              As we continue to expand, our mission remains the same — to build a trusted agricultural brand known for quality, reliability, and excellence.
+            </p>
               <p>
-                Every pig we sell is raised with love, proper nutrition, and veterinary care.
-                We don't just sell pigs — we build lasting partnerships with our customers.
+               Eagles Farm — Building the Future Through Agriculture
               </p>
               <Link to="/about" className="btn btn-primary" style={{ marginTop: '16px' }}>
                 Read Our Story →

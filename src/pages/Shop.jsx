@@ -4,11 +4,11 @@ import ProductCard from '../components/ProductCard.jsx';
 import './Shop.css';
 
 const staticProducts = [
-  { _id: '1', name: 'Red Duroc Pig (50kg)', price: 400000, description: 'Healthy Red Duroc breed, 50kg live weight. Known for excellent meat quality and fast growth.', image: '/images/pig1.jpg', category: 'pig', weight: '50kg', breed: 'Red Duroc' },
-  { _id: '2', name: 'Red Duroc Pig (70kg)', price: 500000, description: 'Premium Red Duroc breed, 70kg live weight. Excellent temperament, fully vaccinated.', image: '/images/pig2.jpg', category: 'pig', weight: '70kg', breed: 'Red Duroc' },
-  { _id: '3', name: 'Marbled Berkshire Pig', price: 600000, description: 'Rare Marbled Berkshire breed, 56kg. Famous for its superior marbled meat.', image: '/images/pig3.jpg', category: 'pig', weight: '56kg', breed: 'Marbled Berkshire' },
-  { _id: '4', name: 'Red Duroc Pig (50kg)', price: 400000, description: 'Quality Red Duroc breed, 50kg. Strong immune system, raised on natural feed.', image: '/images/pig4.jpg', category: 'pig', weight: '50kg', breed: 'Red Duroc' },
-  { _id: '5', name: 'Red Duroc Pig (70kg)', price: 700000, description: 'Premium mature Red Duroc, 70kg. Top-tier genetics with superior growth rate.', image: '/images/pig5.jpg', category: 'pig', weight: '70kg', breed: 'Red Duroc' },
+  { _id: '1', name: 'Red Duroc Pig ', price: 400000, description: 'Healthy Red Duroc breed. Known for excellent meat quality and fast growth.', image: '/images/pig1.jpg', category: 'pig', breed: 'Red Duroc' },
+  { _id: '2', name: 'Red Duroc Pig ', price: 500000, description: 'Premium Red Duroc breed. Excellent temperament, fully vaccinated.', image: '/images/pig2.jpg', category: 'pig', breed: 'Red Duroc' },
+  { _id: '3', name: 'Marbled Berkshire Pig', price: 600000, description: 'Rare Marbled Berkshire breed. Famous for its superior marbled meat.', image: '/images/pig3.jpg', category: 'pig', breed: 'Marbled Berkshire' },
+  { _id: '4', name: 'Red Duroc Pig', price: 400000, description: 'Quality Red Duroc breed, 50kg. Strong immune system, raised on natural feed.', image: '/images/pig4.jpg', category: 'pig', breed: 'Red Duroc' },
+  { _id: '5', name: 'Red Duroc Pig', price: 700000, description: 'Premium mature Red Duroc. Top-tier genetics with superior growth rate.', image: '/images/pig5.jpg', category: 'pig', breed: 'Red Duroc' },
   { _id: '6', name: 'Premium Pig Feed (50kg)', price: 25000, description: 'High-protein balanced pig feed with essential vitamins and minerals for optimal growth.', image: '/images/frontBag.jpg', category: 'feed', weight: '50kg' },
   { _id: '7', name: 'Starter Pig Feed (25kg)', price: 14000, description: 'Specially formulated starter feed for piglets. Promotes healthy early development.', image: '/images/frontBag.jpg', category: 'feed', weight: '25kg' },
   { _id: '8', name: 'Grower Pig Feed (50kg)', price: 22000, description: 'Optimized grower feed for maximum weight gain at reduced cost.', image: '/images/frontBag.jpg', category: 'feed', weight: '50kg' },
