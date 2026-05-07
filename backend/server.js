@@ -27,13 +27,15 @@ app.use('/api/orders', require('./routes/orders'));
 app.get('/', (req, res) => res.json({ message: 'FarmPrideNg API is running!' }));
 
 // MongoDB — Railway has no local MongoDB; without MONGO_URI the app exits and the proxy shows "failed to respond"
+// MongoDB config
 const isRailway = Boolean(process.env.RAILWAY_ENVIRONMENT || process.env.RAILWAY_PROJECT_ID);
+
 const MONGO_URI =
   process.env.MONGO_URI || (isRailway ? null : 'mongodb://127.0.0.1:27017/pigfarm');
 
 if (!MONGO_URI) {
   console.error('❌ MONGO_URI is not set.');
-  console.error('   Railway → your service → Variables → add MONGO_URI (MongoDB Atlas SRV string).');
+  console.error('   Railway → Service → Variables → add MONGO_URI');
   process.exit(1);
 }
 
@@ -44,9 +46,7 @@ mongoose
   .then(() => console.log('✅ MongoDB connected'))
   .catch((err) => {
     console.error('❌ MongoDB connection error:', err.message);
-    console.error('   Check MONGO_URI, Atlas IP access (0.0.0.0/0 for testing), and DB user/password.');
     process.exit(1);
   });
 
-// Listen immediately so OPTIONS / health checks get CORS headers even while DB connects.
 app.listen(PORT, '0.0.0.0', () => console.log(`✅ Server running on port ${PORT}`));
