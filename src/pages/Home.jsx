@@ -6,9 +6,9 @@ import './Home.css';
 
 export default function Home() {
  const staticFeatured = [
-  { _id: '1', name: 'Red Duroc Pig (50kg)', price: 400000, description: 'Healthy Red Duroc breed, 50kg live weight. Known for excellent meat quality and fast growth.', image: '/images/pig1.jpg', category: 'pig', weight: '50kg', breed: 'Red Duroc' },
-  { _id: '2', name: 'Red Duroc Pig (70kg)', price: 500000, description: 'Premium Red Duroc breed, 70kg live weight. Excellent temperament, fully vaccinated.', image: '/images/pig2.jpg', category: 'pig', weight: '70kg', breed: 'Red Duroc' },
-  { _id: '3', name: 'Marbled Berkshire Pig', price: 600000, description: 'Rare Marbled Berkshire breed, 56kg. Famous for its superior marbled meat.', image: '/images/pig3.jpg', category: 'pig', weight: '56kg', breed: 'Marbled Berkshire' },
+  { _id: '1', name: 'Red Duroc Pig', price: 400000, description: 'Healthy Red Duroc breed, live weight. Known for excellent meat quality and fast growth.', image: '/images/pig1.jpg', category: 'pig', breed: 'Red Duroc' },
+  { _id: '2', name: 'Red Duroc Pig', price: 500000, description: 'Premium Red Duroc breed, 70kg live weight. Excellent temperament, fully vaccinated.', image: '/images/pig2.jpg', category: 'pig', breed: 'Red Duroc' },
+  { _id: '3', name: 'Marbled Berkshire Pig', price: 600000, description: 'Rare Marbled Berkshire breed. Famous for its superior marbled meat.', image: '/images/pig3.jpg', category: 'pig', breed: 'Marbled Berkshire' },
   { _id: '6', name: 'Premium Pig Feed (50kg)', price: 25000, description: 'High-protein balanced pig feed with essential vitamins and minerals for optimal growth.', image: '/images/frontBag.jpg', category: 'feed', weight: '50kg' },
 ];
 

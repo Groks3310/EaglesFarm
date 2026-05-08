@@ -5,14 +5,11 @@ import { toast } from 'react-toastify';
 import './ProductDetail.css';
 
 const staticProducts = [
-  { _id: '1', name: 'Red Duroc Pig (50kg)', price: 400000, description: 'Healthy Red Duroc breed, 50kg live weight. Known for excellent meat quality and fast growth. Our Red Duroc pigs are raised on premium feed with regular veterinary care and vaccinations. They are well-adapted to Nigerian climate conditions and have excellent feed conversion ratios.', image: '/images/pig1.jpg', category: 'pig', weight: '50kg', breed: 'Red Duroc', stock: 5 },
-  { _id: '2', name: 'Red Duroc Pig (70kg)', price: 500000, description: 'Premium Red Duroc breed, 70kg live weight. Excellent temperament, fully vaccinated and dewormed. These pigs have been raised under the best conditions to ensure maximum health and productivity for your farm.', image: '/images/pig2.jpg', category: 'pig', weight: '70kg', breed: 'Red Duroc', stock: 4 },
-  { _id: '3', name: 'Marbled Berkshire Pig', price: 600000, description: 'Rare Marbled Berkshire breed, 56kg. Famous for its superior marbled meat — the wagyu of pork. Berkshire pigs are known worldwide for the exceptional quality of their meat. A premium choice for serious farmers and meat producers.', image: '/images/pig3.jpg', category: 'pig', weight: '56kg', breed: 'Marbled Berkshire', stock: 3 },
-  { _id: '4', name: 'Red Duroc Pig (50kg)', price: 400000, description: 'Quality Red Duroc breed, 50kg. Strong immune system, raised on natural feed and open space. These pigs have excellent growth rates and are perfectly suited for both commercial and subsistence farming.', image: '/images/pig4.jpg', category: 'pig', weight: '50kg', breed: 'Red Duroc', stock: 6 },
-  { _id: '5', name: 'Red Duroc Pig (70kg)', price: 700000, description: 'Premium mature Red Duroc, 70kg. Top-tier genetics with superior growth rate and meat quality. This is our finest Red Duroc specimen, perfect for breeding or high-end meat production.', image: '/images/pig5.jpg', category: 'pig', weight: '70kg', breed: 'Red Duroc', stock: 2 },
-  { _id: '6', name: 'Premium Pig Feed (50kg)', price: 25000, description: 'High-protein balanced pig feed. Contains essential vitamins and minerals for optimal growth. Suitable for all pig breeds and growth stages. Formulated by expert nutritionists for maximum feed efficiency and weight gain.', image: '/images/frontBag.jpg', category: 'feed', weight: '50kg', stock: 100 },
-  { _id: '7', name: 'Starter Pig Feed (25kg)', price: 14000, description: 'Specially formulated starter feed for piglets. Promotes healthy early development and strong immune system. Contains probiotics and essential amino acids for the best start in life.', image: '/images/frontBag.jpg', category: 'feed', weight: '25kg', stock: 80 },
-  { _id: '8', name: 'Grower Pig Feed (50kg)', price: 22000, description: 'Optimized grower feed for maximum weight gain at reduced cost. Perfect balance of protein, energy, and minerals for pigs in the growing stage. Trusted by farmers across Nigeria.', image: '/images/frontBag.jpg', category: 'feed', weight: '50kg', stock: 120 },
+     { _id: '1', name: 'Red Duroc Pig', price: 400000, description: 'Healthy Red Duroc breed, live weight. Known for excellent meat quality and fast growth.', image: '/images/pig1.jpg', category: 'pig', breed: 'Red Duroc' },
+  { _id: '1', name: 'Red Duroc Pig', price: 400000, description: 'Healthy Red Duroc breed, live weight. Known for excellent meat quality and fast growth.', image: '/images/pig1.jpg', category: 'pig', breed: 'Red Duroc' },
+  { _id: '2', name: 'Red Duroc Pig', price: 500000, description: 'Premium Red Duroc breed, 70kg live weight. Excellent temperament, fully vaccinated.', image: '/images/pig2.jpg', category: 'pig', breed: 'Red Duroc' },
+  { _id: '3', name: 'Marbled Berkshire Pig', price: 600000, description: 'Rare Marbled Berkshire breed. Famous for its superior marbled meat.', image: '/images/pig3.jpg', category: 'pig', breed: 'Marbled Berkshire' },
+  { _id: '6', name: 'Premium Pig Feed (50kg)', price: 25000, description: 'High-protein balanced pig feed with essential vitamins and minerals for optimal growth.', image: '/images/frontBag.jpg', category: 'feed', weight: '50kg' },
 ];
 
 export default function ProductDetail() {
@@ -64,7 +61,7 @@ export default function ProductDetail() {
 
   const specs = product ? [
     { label: 'Category', value: product.category === 'pig' ? '🐷 Live Pig' : '🌾 Pig Feed' },
-    { label: 'Weight', value: product.weight || 'N/A' },
+   ...(product.category === 'feed' ? [{ label: 'Weight', value: product.weight || 'N/A' }] : []),
     { label: 'Breed', value: product.breed || 'N/A' },
     { label: 'Stock', value: product.stock ? `${product.stock} available` : 'In Stock' },
     { label: 'Delivery', value: 'Nationwide' },
@@ -145,11 +142,11 @@ export default function ProductDetail() {
 
               <div className="detail-price">{formatPrice(product.price)}</div>
 
-              {product.weight && (
-                <div className="detail-weight">
-                  ⚖️ Weight: <strong>{product.weight}</strong>
-                </div>
-              )}
+            {product.weight && product.category === 'feed' && (
+  <div className="detail-weight">
+    ⚖️ Weight: <strong>{product.weight}</strong>
+  </div>
+)}
 
               <p className="detail-desc">{product.description}</p>
 

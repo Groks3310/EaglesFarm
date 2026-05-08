@@ -30,7 +30,9 @@ export default function ProductCard({ product }) {
         <div className="product-card-body">
           <span className="badge">{product.category === 'pig' ? '🐷 Live Pig' : '🌾 Feed'}</span>
           {product.breed && <div style={{ fontSize: '0.8rem', color: '#64748b', marginBottom: '4px' }}>{product.breed}</div>}
-          {product.weight && <div style={{ fontSize: '0.8rem', color: '#64748b', marginBottom: '6px' }}>⚖️ {product.weight}</div>}
+          {product.weight && product.category === 'feed' && (
+  <div style={{ fontSize: '0.8rem', color: '#64748b', marginBottom: '6px' }}>⚖️ {product.weight}</div>
+)}
           <h3>{product.name}</h3>
           <div className="price">{formatPrice(product.price)}</div>
           <p style={{ fontSize: '0.85rem', color: '#64748b', margin: '8px 0', lineHeight: 1.5 }}>
