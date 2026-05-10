@@ -4,10 +4,10 @@ import ProductCard from '../components/ProductCard.jsx';
 import './Shop.css';
 const staticProducts = [
   
-  { _id: '1', name: 'Large White', price: 400000, description: 'Healthy Duroc breed. Known for excellent meat quality and fast growth.', image: '/images/pig1.jpg', category: 'pig', breed: 'duroc' },
-  { _id: '2', name: 'Duroc Pig ', price: 500000, description: 'Premium Duroc breed. Excellent temperament, fully vaccinated.', image: '/images/pig2.jpg', category: 'pig', breed: 'Duroc' },
-  { _id: '3', name: 'Landrance Pig', price: 600000, description: 'Landrance famous for its superior Landrance meat.', image: '/images/pig3.jpg', category: 'pig', breed: 'Landrance  Strong immune system, raised on natural feed.', image: '/images/pig4.jpg', category: 'pig', breed: 'Landrance' },
-  { _id: '4', name: 'Duroc Pig', price: 400000, description: 'Quality Duroc breed.' },
+  { _id: '1', name: 'Large White', price: 400000, description: 'Healthy Large white. Known for excellent meat quality and fast growth.', image: '/images/pig1.jpeg', category: 'pig', breed: 'Large white' },
+  { _id: '2', name: 'Duroc Pig ', price: 500000, description: 'Premium Duroc breed. Excellent temperament, fully vaccinated.', image: '/images/pig2.jpeg', category: 'pig', breed: 'Duroc' },
+  { _id: '3', name: 'Landrance Pig', price: 600000, description: 'Landrance famous for its superior Landrance meat.', image: '/images/pig3.jpeg', category: 'pig', breed: 'Landrance  Strong immune system, raised on natural feed.' },
+  { _id: '4', name: 'Duroc Pig', price: 400000, description: 'Quality Duroc breed.', image: '/images/pig2.jpeg', category: 'pig', breed: 'Duroc' },
   { _id: '5', name: 'Duroc Pig', price: 700000, description: 'Premium mature Duroc. Top-tier genetics with superior growth rate.', image: '/images/pig5.jpg', category: 'pig', breed: 'Duroc' },
   { _id: '6', name: 'Premium Pig Feed (50kg)', price: 25000, description: 'High-protein balanced pig feed with essential vitamins and minerals for optimal growth.', image: '/images/frontBag.jpg', category: 'feed' },
   { _id: '7', name: 'Starter Pig Feed (25kg)', price: 14000, description: 'Specially formulated starter feed for piglets. Promotes healthy early development.', image: '/images/frontBag.jpg', category: 'feed' },
