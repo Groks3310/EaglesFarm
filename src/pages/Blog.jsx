@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useAuth } from '../context/AuthContext.jsx';
@@ -214,9 +215,9 @@ export default function Blog() {
                       <h3>Join the Conversation</h3>
                       <p>Login or create an account to post comments and reviews</p>
                       <div className="login-prompt-btns">
-                        <a href="/login" className="btn btn-primary">Login</a>
-                        <a href="/register" className="btn btn-outline">Sign Up Free</a>
-                      </div>
+  <Link to="/login" className="btn btn-primary">Login</Link>
+  <Link to="/register" className="btn btn-outline">Sign Up Free</Link>
+</div>
                     </div>
                   )}
                 </div>
@@ -317,9 +318,9 @@ export default function Blog() {
                 <div className="cta-widget-icon">🐷</div>
                 <h3>Ready to Buy?</h3>
                 <p>Browse our premium pigs and feeds available for immediate delivery.</p>
-                <a href="/shop" className="btn btn-primary cta-widget-btn">
-                  Shop Now →
-                </a>
+                <Link to="/shop" className="btn btn-primary cta-widget-btn">
+                 Shop Now →
+                 </Link>
               </div>
             </aside>
 

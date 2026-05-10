@@ -9,7 +9,7 @@ const app = express();
 
 // CORS — explicit allowlist (required when credentials: true)
 app.use(cors({
-  origin: ['https://eagles-farm.vercel.app', 'http://localhost:5173', 'http://localhost:5174'],
+  origin: ['https://eagles-farm.vercel.app','https://eaglesfarm.netlify.app', 'http://localhost:5173', 'http://localhost:5174'],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],

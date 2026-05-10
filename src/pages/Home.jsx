@@ -86,7 +86,7 @@ const [loading, setLoading] = useState(false);
         <div className="container">
           <div className="section-header">
             <span className="tag">Why Choose Us</span>
-            <h2 className="section-title">The Eagles Farm Difference</h2>
+            <h2 className="section-title">Eagles Farm ---Building profitable farms with Excellence.</h2>
             <p className="section-subtitle">
               We render agricultural services, breeding healthy animals in a prinstine environment. Transparency is the Goal!
             </p>
@@ -172,8 +172,8 @@ const [loading, setLoading] = useState(false);
       <section className="cta-section">
         <div className="container">
           <div className="cta-content">
-            <h2>Ready to Start Your Pig Farm?</h2>
-            <p>Get premium pigs delivered to your doorstep. WhatsApp us now for custom orders.</p>
+            <h2>Are you ready to start your own farm?</h2>
+            <p>Eagles Farm helps individuals and businesses establish and manage profitable farms with modern farming solutions</p>
             <div className="cta-buttons">
               <Link to="/shop" className="btn btn-white">🛒 Shop Now</Link>
                 <a
