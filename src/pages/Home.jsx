@@ -105,7 +105,7 @@ const [loading, setLoading] = useState(false);
         <div className="container">
           <div className="section-header">
             <span className="tag">Why Choose Us</span>
-            <h2 className="section-title">Eagles Farm ---Building profitable farms with Excellence.</h2>
+            <h2 className="section-title">EAGLES FARM ---Building profitable farms with Excellence.</h2>
             <p className="section-subtitle">
               We render agricultural services, breeding healthy animals in a prinstine environment. Transparency is the Goal!
             </p>
