@@ -7,8 +7,8 @@ import './Home.css';
 export default function Home() {
  const staticFeatured = [
   { _id: '1', name: 'Large White', price: 400000, description: 'Healthy Large White breed. Known for excellent meat quality and fast growth.', image: '/images/pig1.jpeg', category: 'pig', breed: 'Large White' },
-  { _id: '2', name: 'Duroc Pig', price: 500000, description: 'Premium Duroc breed. Excellent temperament, fully vaccinated.', image: '/images/pig2.jpg', category: 'pig', breed: 'Duroc' },
-  { _id: '3', name: 'Landrance Pig', price: 600000, description: 'Rare Landrance Pig breed. Famous for its superior Landrance Pig meat.', image: '/images/pig3.jpg', category: 'pig', breed: 'Landrance Pig' },
+  { _id: '2', name: 'Duroc Pig', price: 500000, description: 'Premium Duroc breed. Excellent temperament, fully vaccinated.', image: '/images/pig2.jpeg', category: 'pig', breed: 'Duroc' },
+  { _id: '3', name: 'Landrance Pig', price: 600000, description: 'Rare Landrance Pig breed. Famous for its superior Landrance Pig meat.', image: '/images/pig3.jpeg', category: 'pig', breed: 'Landrance Pig' },
   { _id: '6', name: 'Premium Pig Feed (50kg)', price: 36000, description: 'High-protein balanced pig feed with essential vitamins and minerals for optimal growth.', image: '/images/frontBag.jpg', category: 'feed', weight: '50kg' },
 ];
 
