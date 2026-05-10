@@ -54,28 +54,54 @@ const [loading, setLoading] = useState(false);
           <div className="hero-overlay" />
         </div>
         <div className="hero-content container">
-          <div className="hero-badge fade-in">🌟 Nigeria's #1 Pig Farm</div>
-          <h1 className="hero-title fade-in">
-            Premium Pigs &<br />
-            <span>Farm Supplies</span>
-          </h1>
-          <p className="hero-subtitle fade-in">
-            Connecting quality pig breeders with buyers across Nigeria.
-            Healthy breeds, quality feeds, and unmatched farm support.
-          </p>
-          <div className="hero-buttons fade-in">
-            <Link to="/shop" className="btn btn-white">🐷 Shop Now</Link>
-            <Link to="/about" className="btn btn-outline-white">Learn More →</Link>
-          </div>
-          <div className="hero-stats fade-in">
-            {stats.map((s, i) => (
-              <div key={i} className="hero-stat">
-                <div className="stat-number">{s.number}</div>
-                <div className="stat-label">{s.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
+  <div className="hero-badge fade-in">🌟 Nigeria's #1 Pig Farm</div>
+  
+  {/* EAGLES FARM ANIMATED TITLE */}
+  {/* EAGLES FARM ANIMATED TITLE */}
+<div className="eagles-title-wrap">
+  <h1 className="eagles-title">
+    {'EAGLES FARM'.split('').map((letter, i) => (
+      <span
+        key={i}
+        className={`eagles-letter ${letter === ' ' ? 'eagles-space' : ''}`}
+        style={{ animationDelay: `${i * 0.08}s` }}
+      >
+        {letter === ' ' ? '\u00A0' : letter}
+      </span>
+    ))}
+  </h1>
+  <div className="eagles-underline">
+    <div className="eagles-underline-inner" />
+  </div>
+  <div className="eagles-tagline">
+    <span className="tagline-dash">—</span>
+    <span className="tagline-text">Premium Pig Farming Excellence</span>
+    <span className="tagline-dash">—</span>
+  </div>
+</div>
+
+  <h4 className="hero-title fade-in">
+    Premium Pigs &<br />
+    <span>Farm Supplies</span>
+  </h4>
+  <p className="hero-subtitle fade-in">
+    Connecting quality pig breeders with buyers across Nigeria.
+    Healthy breeds, quality feeds, and unmatched farm support.
+  </p>
+  <div className="hero-buttons fade-in">
+    <Link to="/shop" className="btn btn-white">🐷 Shop Now</Link>
+    <Link to="/about" className="btn btn-outline-white">Learn More →</Link>
+  </div>
+  <div className="hero-stats fade-in">
+    {stats.map((s, i) => (
+      <div key={i} className="hero-stat">
+        <div className="stat-number">{s.number}</div>
+        <div className="stat-label">{s.label}</div>
+      </div>
+    ))}
+  </div>
+</div>
+
         <div className="hero-scroll">
           <div className="scroll-indicator" />
         </div>
