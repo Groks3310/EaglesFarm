@@ -370,65 +370,7 @@
   animation-play-state: paused !important;
 }
 
-/* UNDERLINE */
-.eagles-underline {
-  height: 2px;
-  background: rgba(255,255,255,0.1);
-  border-radius: 2px;
-  margin-bottom: 16px;
-  overflow: hidden;
-  max-width: 700px;
-  position: relative;
-}
 
-.eagles-underline-inner {
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    #60A5FA 30%,
-    white 50%,
-    #60A5FA 70%,
-    transparent 100%
-  );
-  background-size: 200% 100%;
-  animation: underlineSweep 2s linear infinite;
-}
-
-@keyframes underlineSweep {
-  0% { background-position: 200% 0; }
-  100% { background-position: -200% 0; }
-}
-
-/* TAGLINE */
-.eagles-tagline {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  opacity: 0;
-  animation: fadeInUp 0.8s ease 1.8s forwards;
-}
-
-.tagline-dash {
-  color: #60A5FA;
-  font-size: 1rem;
-  animation: pulse 2s ease-in-out infinite;
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.4; }
-}
-
-.tagline-text {
-  font-family: 'DM Sans', sans-serif;
-  font-size: clamp(0.7rem, 1.5vw, 0.9rem);
-  color: rgba(255,255,255,0.7);
-  font-weight: 500;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-}
 
 /* RESPONSIVE */
 @media (max-width: 768px) {

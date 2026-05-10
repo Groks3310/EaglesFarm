@@ -36,7 +36,7 @@ const [loading, setLoading] = useState(false);
   ];
 
   const features = [
-    { icon: '🐷', title: 'Premium Breeds', desc: 'Red Duroc and Berkshire pigs raised with care and quality feed.' },
+    { icon: '🐷', title: 'Premium Breeds', desc: 'Duroc and Berkshire pigs raised with care and quality feed.' },
     { icon: '🌾', title: 'Quality Feeds', desc: 'High-protein balanced feeds for optimal pig growth and health.' },
     { icon: '🚚', title: 'Fast Delivery', desc: 'Safe and reliable delivery of live pigs across Nigeria.' },
     { icon: '👨‍⚕️', title: 'Vet Support', desc: 'Expert veterinary guidance included with every purchase.' },
@@ -70,14 +70,7 @@ const [loading, setLoading] = useState(false);
       </span>
     ))}
   </h1>
-  <div className="eagles-underline">
-    <div className="eagles-underline-inner" />
-  </div>
-  <div className="eagles-tagline">
-    <span className="tagline-dash">—</span>
-    <span className="tagline-text">Premium Pig Farming Excellence</span>
-    <span className="tagline-dash">—</span>
-  </div>
+
 </div>
 
   <h4 className="hero-title fade-in">
