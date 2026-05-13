@@ -9,7 +9,7 @@ export default function Home() {
   { _id: '1', name: 'Large White', price: 400000, description: 'Healthy Large White breed. Known for excellent meat quality and fast growth.', image: '/images/pig1.jpeg', category: 'pig', breed: 'Large White' },
   { _id: '2', name: 'Duroc Pig', price: 500000, description: 'Premium Duroc breed. Excellent temperament, fully vaccinated.', image: '/images/pig2.jpeg', category: 'pig', breed: 'Duroc' },
   { _id: '3', name: 'Landrance Pig', price: 600000, description: 'Rare Landrance Pig breed. Famous for its superior Landrance Pig meat.', image: '/images/pig3.jpeg', category: 'pig', breed: 'Landrance Pig' },
-  { _id: '6', name: 'Premium Pig Feed (50kg)', price: 36000, description: 'High-protein balanced pig feed with essential vitamins and minerals for optimal growth.', image: '/images/frontBag.jpg', category: 'feed', weight: '50kg' },
+  { _id: '6', name: 'Premium Pig Feed (25kg)', price: 18000, description: 'High-protein balanced pig feed with essential vitamins and minerals for optimal growth.', image: '/images/frontBag.jpg', category: 'feed', weight: '25kg' },
 ];
 
 const [featuredProducts, setFeaturedProducts] = useState(staticFeatured);
@@ -36,7 +36,7 @@ const [loading, setLoading] = useState(false);
   ];
 
   const features = [
-    { icon: '🐷', title: 'Premium Breeds', desc: 'Duroc and Berkshire pigs raised with care and quality feed.' },
+    { img: '/images/pigPicture.jpg', title: 'Premium Breeds', desc: 'Healthy Duroc, Large white, Landrance, Hampshire, Pietrain, Chester White, Tamworth, Berkshire pigs raised with care, hygiene and quality nutrition' },
     { icon: '🌾', title: 'Quality Feeds', desc: 'High-protein balanced feeds for optimal pig growth and health.' },
     { icon: '🚚', title: 'Fast Delivery', desc: 'Safe and reliable delivery of live pigs across Nigeria.' },
     { icon: '👨‍⚕️', title: 'Vet Support', desc: 'Expert veterinary guidance included with every purchase.' },
@@ -57,22 +57,33 @@ const [loading, setLoading] = useState(false);
   <div className="hero-badge fade-in">🌟 Nigeria's #1 Pig Farm</div>
   
   {/* EAGLES FARM ANIMATED TITLE */}
-  {/* EAGLES FARM ANIMATED TITLE */}
+ {/* HERO EAGLE */}
+{/* EAGLES FARM ANIMATED TITLE */}
 <div className="eagles-title-wrap">
-  <h1 className="eagles-title">
-    {'EAGLES FARM'.split('').map((letter, i) => (
-      <span
-        key={i}
-        className={`eagles-letter ${letter === ' ' ? 'eagles-space' : ''}`}
-        style={{ animationDelay: `${i * 0.08}s` }}
-      >
-        {letter === ' ' ? '\u00A0' : letter}
-      </span>
-    ))}
-  </h1>
-
+  <div className="eagles-title-row">
+    <img
+      src="/images/Eagles.png"
+      alt="Eagles Farm"
+      className="eagles-logo-img"
+    />
+    <div className="eagles-title-text">
+      <h1 className="eagles-title">
+        {'EAGLES FARM'.split('').map((letter, i) => (
+          <span
+            key={i}
+            className={`eagles-letter ${letter === ' ' ? 'eagles-space' : ''}`}
+            style={{ animationDelay: `${i * 0.08}s` }}
+          >
+            {letter === ' ' ? '\u00A0' : letter}
+          </span>
+        ))}
+      </h1>
+      <div className="eagles-underline">
+        <div className="eagles-underline-inner" />
+      </div>
+    </div>
+  </div>
 </div>
-
   <h4 className="hero-title fade-in">
     Premium Pigs &<br />
     <span>Farm Supplies</span>
@@ -111,14 +122,20 @@ const [loading, setLoading] = useState(false);
             </p>
           </div>
           <div className="features-grid">
-            {features.map((f, i) => (
-              <div key={i} className="feature-card glass-card">
-                <div className="feature-icon">{f.icon}</div>
-                <h3>{f.title}</h3>
-                <p>{f.desc}</p>
-              </div>
-            ))}
-          </div>
+  {features.map((f, i) => (
+    <div key={i} className="feature-card glass-card">
+      {f.img ? (
+        <div className="feature-img-wrap">
+          <img src={f.img} alt={f.title} className="feature-pig-img" />
+        </div>
+      ) : (
+        <div className="feature-icon">{f.icon}</div>
+      )}
+      <h3>{f.title}</h3>
+      <p>{f.desc}</p>
+    </div>
+  ))}
+</div>
         </div>
       </section>
 

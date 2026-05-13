@@ -9,8 +9,8 @@ const staticProducts = [
   { _id: '3', name: 'Landrance Pig', price: 600000, description: 'Landrance famous for its superior Landrance meat.', image: '/images/pig3.jpeg', category: 'pig', breed: 'Landrance  Strong immune system, raised on natural feed.' },
   { _id: '4', name: 'Duroc Pig', price: 400000, description: 'Quality Duroc breed.', image: '/images/pig2.jpeg', category: 'pig', breed: 'Duroc' },
   { _id: '5', name: 'Duroc Pig', price: 700000, description: 'Premium mature Duroc. Top-tier genetics with superior growth rate.', image: '/images/pig5.jpg', category: 'pig', breed: 'Duroc' },
-  { _id: '6', name: 'Premium Pig Feed (50kg)', price: 25000, description: 'High-protein balanced pig feed with essential vitamins and minerals for optimal growth.', image: '/images/frontBag.jpg', category: 'feed' },
-  { _id: '7', name: 'Starter Pig Feed (25kg)', price: 14000, description: 'Specially formulated starter feed for piglets. Promotes healthy early development.', image: '/images/frontBag.jpg', category: 'feed' },
+  { _id: '6', name: 'Premium Pig Feed (25kg)', price: 18000, description: 'High-protein balanced pig feed with essential vitamins and minerals for optimal growth.', image: '/images/frontBag.jpg', category: 'feed' },
+  { _id: '7', name: 'Starter Pig Feed (25kg)', price: 18000, description: 'Specially formulated starter feed for piglets. Promotes healthy early development.', image: '/images/frontBag.jpg', category: 'feed' },
   { _id: '8', name: 'Grower Pig Feed (50kg)', price: 22000, description: 'Optimized grower feed for maximum weight gain at reduced cost.', image: '/images/frontBag.jpg', category: 'feed' },
 ];
 

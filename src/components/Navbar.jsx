@@ -33,10 +33,12 @@ export default function Navbar() {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
-        <Link to="/" className="logo">
-          <span className="logo-icon">🐷</span>
-          <span className="logo-text">Eagles Farm<span>Ng</span></span>
-        </Link>
+     <Link to="/" className="logo">
+  <div className="logo-eagle">
+    <img src="/images/Eagles.png" alt="Eagles Farm Logo" className="logo-img" />
+  </div>
+  <span className="logo-text">EaglesFarm<span>Ng</span></span>
+</Link>
 
         <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
           {links.map(l => (

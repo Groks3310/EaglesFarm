@@ -191,14 +191,20 @@
 
 /* TEAM */
 .team-section { background: rgba(255,255,255,0.3); }
+
 .team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 28px;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
 }
+
 .team-card {
-  overflow: hidden;
-  transition: all 0.3s ease;
+  width: 300px;
+  flex-shrink: 0;
 }
 .team-card:hover { transform: translateY(-6px); }
 .team-img-wrap {

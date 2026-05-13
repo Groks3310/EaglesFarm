@@ -12,8 +12,7 @@ export default function About() {
 
   const team = [
     { name: 'Edwin Ogaga', role: 'CEO & Head Farmer', img: '/images/farmer.jpeg', desc: 'Over 15 years of pig farming experience. Founded Eagles Farm to bring quality breeds to all Nigerians.' },
-    { name: 'Dr. Adaeze Obi', role: 'Lead Veterinarian', img: '/images/farmer.jpeg', desc: 'Certified veterinarian ensuring the health and wellbeing of every animal on the farm.' },
-    { name: 'Emeka Nwosu', role: 'Farm Manager', desc: 'Oversees daily farm operations, feed management and breeding programs.', img: '/images/farmer.jpeg' },
+   
   ];
 
   const milestones = [
@@ -132,9 +131,9 @@ export default function About() {
       <section className="section team-section">
         <div className="container">
           <div className="section-header" style={{ textAlign: 'center', marginBottom: '48px' }}>
-            <span className="tag">The People</span>
-            <h2 className="section-title">Meet Our Team</h2>
-            <p className="section-subtitle">Passionate people dedicated to quality farming</p>
+            <span className="tag">The CEO</span>
+            <h2 className="section-title">The Founded</h2>
+            <p className="section-subtitle">Passionate Farmer dedicated to quality farming</p>
           </div>
           <div className="team-grid">
             {team.map((member, i) => (
