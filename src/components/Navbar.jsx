@@ -37,7 +37,7 @@ export default function Navbar() {
   <div className="logo-eagle">
     <img src="/images/Eagles.png" alt="Eagles Farm Logo" className="logo-img" />
   </div>
-  <span className="logo-text">EaglesFarm<span>Ng</span></span>
+  <span className="logo-text">EaglesFarm<span>Ng LTD</span></span>
 </Link>
 
         <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
